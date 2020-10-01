@@ -1,0 +1,80 @@
+:root{
+    --action-color: rgb(69, 253, 69);
+    --dark-bg: rgb(90, 94, 90);
+    --light-bg: rgb(63, 78, 59);
+}
+*{
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: Poppins;
+}
+p, a{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+header{
+    height: 70px;
+    padding-top: 20px;
+    background: var(--dark-bg);
+    margin-bottom: 20px;
+}
+header .brand a{
+    color: var(--action-color);
+}
+.logout a{
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid white;
+    border-radius: 2px;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+}
+.logout a:hover{
+    text-decoration: none;
+}
+.card-header, .dark{
+    background: var(--dark-bg) !important;
+    color: #fff;
+}
+#profile-image{
+    height: 300px;
+    text-align: center;
+}
+#profile-image .image{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+#profile-image img{
+    width: 150px;
+}
+.sidebar{
+    height: calc(100vh - 80px);
+    padding: 20px 10px;
+    border-right: 1px solid gray;
+    width: 100%;
+}
+ul li.active{
+    border: 1px solid rgb(69, 253, 69) !important; 
+    background: var(--dark-bg) !important;    
+    border-radius: 5px;
+}
+ul li.active a{
+    color: var(--action-color) !important;
+}
+ul li a{
+    color: rgb(12, 12, 12);
+    font-size: 18px;    
+}
+
+.breadcrumb{
+    background: none !important;
+}
+.card svg{
+    margin-top: 30px;
+    color: var(--action-color);
+    font-size: 40px;
+}
