@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BitCoin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Poppins&family=Roboto+Mono:wght@423&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body class="index">
+    
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <a class="navbar-brand" href="index.html">BitCoin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Sign In <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Regiter</a>
+                </li>
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+    
+    <section id="showcase">
+        <div class="container">
+            <h2 class="mb-3 text-center">Register with us</h2>
+            <form class="needs-validation" novalidate>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="firstName">First name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid first name is required.
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="lastName">Last name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                        <div class="invalid-feedback">
+                            Valid last name is required.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="username" placeholder="Username" required>
+                        <div class="invalid-feedback" style="width: 100%;">
+                            Your username is required.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="email">Email <span class="text-muted">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                    <div class="invalid-feedback">
+                        Please enter your shipping address.
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-5 mb-3">
+                        <label for="country">Country</label>
+                        <select class="custom-select d-block w-100" id="country" required>
+                            <option value="">Choose...</option>
+                            <option>United States</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid country.
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="state">State</label>
+                        <select class="custom-select d-block w-100" id="state" required>
+                            <option value="">Choose...</option>
+                            <option>California</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please provide a valid state.
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zip">Zip</label>
+                        <input type="text" class="form-control" id="zip" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Zip code required.
+                        </div>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                
+                <h4 class="mb-3">Payment</h4>
+                
+                <div class="d-block my-3">
+                    <div class="custom-control custom-radio">
+                        <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+                        <label class="custom-control-label" for="credit">Credit card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="debit">Debit card</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
+                        <label class="custom-control-label" for="paypal">PayPal</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-name">Name on card</label>
+                        <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                        <small class="text-muted">Full name as displayed on card</small>
+                        <div class="invalid-feedback">
+                            Name on card is required
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="cc-number">Credit card number</label>
+                        <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Credit card number is required
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-expiration">Expiration</label>
+                        <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Expiration date required
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="cc-cvv">CVV</label>
+                        <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Security code required
+                        </div>
+                    </div>
+                </div>
+                <hr class="mb-4">
+                <button class="btn btn-secondary btn-lg btn-lg" type="submit">Register</button>
+                <p>Already Have an account? <a href="login">Click Here To Login</a></p>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <p class="text-center">BitCoin Copyright &copy; 2020</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.csshttps://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar-light', {
+            duration: 2000,
+            origin: 'bottom'
+        });
+        sr.reveal('.showcase-left', {
+            duration: 2000,
+            origin: 'top',
+            distance: '300px'
+        });
+        sr.reveal('.showcase-right', {
+            duration: 2000,
+            origin: 'right',
+            distance: '300px'
+        });
+        sr.reveal('.showcase-btn', {
+            delay: 2000,
+            duration: 2000,
+            origin: 'bottom'
+        });
+        sr.reveal('#testimonial div', {
+            duration: 2000,
+            origin: 'bottom'
+        });
+    </script>
+</body>
+</html>
