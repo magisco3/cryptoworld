@@ -1,3 +1,8 @@
+:root{
+    --action-color: rgb(69, 253, 69);
+    --dark-bg: rgb(90, 94, 90);
+    --light-bg: rgb(63, 78, 59);
+}
 html{
     scroll-behavior: smooth;
 }
@@ -26,7 +31,7 @@ p{
 .navbar-light{
     font-family: Poppins;
     background: #000;
-    
+    height: 70px;    
 }
 .navbar-light a{
     color: white !important;
@@ -35,6 +40,30 @@ p{
     font-size: 20px;
     color: white !important;
     font-weight: bold;
+}
+#jumbotron{
+    height: 700px;
+    width: 100%;
+    background: url(../images/jumbotron1.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 100px;
+    color: #fff;
+}
+#jumbotron .container{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 400px;
+    padding-top: 20px;
+}
+#jumbotron h1{
+    font-size: 90px;
+}
+#jumbotron a{
+    margin-top: 20px;
+    border: 2px solid var(--action-color);
+    color: #fff;
+    font-weight: 700;    
 }
 #showcase h1{
     font-size: 50px;
@@ -97,6 +126,9 @@ p{
 #plans h3{
     font-size: 20px;
 }
+.btn-outline-call{
+    border: 2px solid var(--action-color);
+}
 #info2{
     margin: 20px 0 60px;
 }
@@ -113,4 +145,15 @@ p{
 }
 #contact ul li{
     margin-bottom: 20px;
+}
+@media only screen and (max-width: 600px){
+    body{
+        width: 100%;
+    }
+    #jumbotron{
+        background-image: url(../images/bg3.jpg);
+    }
+    #jumbotron h1{
+        font-size: 45px;
+    }
 }
