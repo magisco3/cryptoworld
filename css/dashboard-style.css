@@ -21,12 +21,24 @@ p, a{
 }
 header{
     min-height: 70px;
-    padding-bottom: 7px;
-    padding-top: 20px;
+    padding: 15px 30px 7px;;
     background: var(--dark-bg);
-    margin-bottom: 20px;
 }
-header .brand a{
+header a{
+    color: #fff;
+    display: inline-block;
+    width: 100px;
+    padding: 3px 15px;
+    text-align: center;
+    margin-right: 10px;
+    transition: all 2000ms;
+}
+header a:hover{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+header .brand{
     color: var(--action-color);
 }
 #show-sidebar{
