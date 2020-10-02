@@ -71,7 +71,7 @@ p{
     width: 90%;
 }
 #plans{
-    height: 750px;
+    min-height: 750px;
     padding-top: 30px;
 }
 #plans h2, #plans p{
