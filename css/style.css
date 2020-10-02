@@ -3,11 +3,12 @@
     --dark-bg: rgb(90, 94, 90);
     --light-bg: rgb(63, 78, 59);
 }
+*{
+    margin: 0;
+    padding: 0;
+}
 html{
     scroll-behavior: smooth;
-}
-.index{
-    margin-top: 70px;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: Poppins;
@@ -28,18 +29,27 @@ p{
       font-size: 3.5rem;
     }
 }
-.navbar-light{
-    font-family: Poppins;
-    background: #000;
-    height: 70px;    
+header{
+    min-height: 70px;
+    padding: 15px 30px 7px;;
+    background: var(--dark-bg);
 }
-.navbar-light a{
-    color: white !important;
+header a{
+    color: #fff;
+    display: inline-block;
+    min-width: 70px;
+    padding: 3px 15px;
+    text-align: center;
+    margin-right: 10px;
+    transition: all 5000ms;
 }
-.navbar-brand{
-    font-size: 20px;
-    color: white !important;
-    font-weight: bold;
+header a:hover{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+header .brand{
+    color: var(--action-color);
 }
 #jumbotron{
     height: 700px;
