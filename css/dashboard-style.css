@@ -7,7 +7,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
 }
 body{
     overflow: auto;
@@ -21,7 +20,7 @@ p, a{
 }
 header{
     min-height: 70px;
-    padding: 15px 30px 7px;;
+    padding: 15px 30px 7px;
     background: var(--dark-bg);
 }
 header a{
@@ -41,31 +40,11 @@ header a:hover{
 header .brand{
     color: var(--action-color);
 }
-#show-sidebar{
+header .hambuger{
     display: none;
 }
-#show-sidebar:checked ~#sidebar{
-    width: 250px;
-}
-#show-sidebar:checked ~#main{
-    right: 0;
-}
-#sidebar{
-    position: relative;
-    width: 0px;
-    overflow: hidden;
-    transition: all 500ms;
-    transition-timing-function: linear;
-}
-#main{
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    min-height: 800px;
-    overflow: scroll;
-    transition: all 500ms;
-    transition-timing-function: linear;
+#show-sidebar{
+    display: none;
 }
 .logout a{
     color: rgb(255, 255, 255) !important;
@@ -79,7 +58,7 @@ header .brand{
 .logout a:hover{
     text-decoration: none;
 }
-.card-header, .dark{
+.card-header{
     background: var(--dark-bg) !important;
     color: #fff;
 }
@@ -94,24 +73,20 @@ header .brand{
     overflow: hidden;
     margin: 0 auto;
 }
-#profile-image img{
-    width: 150px;
+#sidebar{
+    margin-top: 40px;
+    width: 25%;
+    overflow: hidden;
 }
-.sidebar{
-    height: calc(100vh - 80px);
-    padding: 20px 10px;
-    border-right: 1px solid gray;
-    width: 300px;
-}
-.sidebar ul li.active{
+#sidebar ul li.active{
     border: 1px solid rgb(69, 253, 69) !important; 
     background: var(--dark-bg) !important;    
     border-radius: 5px;
 }
-.sidebar ul li.active a{
+#sidebar ul li.active a{
     color: var(--action-color) !important;
 }
-.sidebar ul li a{
+#sidebar ul li a{
     color: rgb(12, 12, 12);
     font-size: 18px;    
 }
@@ -133,4 +108,41 @@ header .brand{
     background: var(--action-color);
     border: 1px solid var(--dark-bg);
     color: var(--dark-bg);
+}
+@media only screen and (max-width: 770px){
+    header .hambuger{
+        display: block;
+    }
+    #sidebar{
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        height: 0;
+        transition: all 500ms;
+        overflow: scroll;
+    }
+    #show-sidebar:checked ~#sidebar{
+        min-height: 400px;
+    }
+}
+@media only screen and (min-width: 770px) and (max-width: 1174px){
+    header .hambuger{
+        display: block;
+    }
+    #sidebar{        
+        width: 0;
+        padding: 0;
+        margin-left: 0;
+        position: absolute;
+        top:40px;
+        left: 0;
+        z-index: 10;
+        background: #fff;
+        transition: all 500ms;
+    }
+    #show-sidebar:checked ~#sidebar{
+        width: 30% !important;
+        border-right: 1px solid gray;
+        padding-right: 40px;
+    }
 }
